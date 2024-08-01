@@ -1,15 +1,9 @@
-import java.util.Scanner;
-
-public class EvenSumFibonacci {
+import java.io.*;
+class EvenSumFibonacci {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the value of N: ");
-        int n = scanner.nextInt();
-        scanner.close();
-        
+        int n = 4; 
         int sum = 0;
         int first = 0, second = 1;
-        
         for (int i = 0; i <= 2 * n; i++) {
             if (i % 2 == 0) {
                 sum += first;
@@ -17,8 +11,7 @@ public class EvenSumFibonacci {
             int next = first + second;
             first = second;
             second = next;
-        }
-        
+        }        
         System.out.println("Sum of numbers at even indexes: " + sum);
     }
 }
